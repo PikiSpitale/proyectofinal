@@ -1,0 +1,37 @@
+C:\Users\USUARIO\OneDrive\Escritorio\Pochi\Programacion 2\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.csproj.AssemblyReference.cache
+C:\Users\USUARIO\OneDrive\Escritorio\Pochi\Programacion 2\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.csproj.CoreCompileInputs.cache
+C:\Users\USUARIO\OneDrive\Escritorio\Pochi\Programacion 2\ProyectoFinal\ProyectoFinal\bin\Debug\ProyectoFinal.exe.config
+C:\Users\USUARIO\OneDrive\Escritorio\Pochi\Programacion 2\ProyectoFinal\ProyectoFinal\bin\Debug\ProyectoFinal.exe
+C:\Users\USUARIO\OneDrive\Escritorio\Pochi\Programacion 2\ProyectoFinal\ProyectoFinal\bin\Debug\ProyectoFinal.pdb
+C:\Users\USUARIO\OneDrive\Escritorio\Pochi\Programacion 2\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.exe
+C:\Users\USUARIO\OneDrive\Escritorio\Pochi\Programacion 2\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.pdb
+C:\Users\tmaldonado\Desktop\visual\ProyectoFinal\ProyectoFinal\bin\Debug\ProyectoFinal.exe.config
+C:\Users\tmaldonado\Desktop\visual\ProyectoFinal\ProyectoFinal\bin\Debug\ProyectoFinal.exe
+C:\Users\tmaldonado\Desktop\visual\ProyectoFinal\ProyectoFinal\bin\Debug\ProyectoFinal.pdb
+C:\Users\tmaldonado\Desktop\visual\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.csproj.AssemblyReference.cache
+C:\Users\tmaldonado\Desktop\visual\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.csproj.SuggestedBindingRedirects.cache
+C:\Users\tmaldonado\Desktop\visual\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.csproj.CoreCompileInputs.cache
+C:\Users\tmaldonado\Desktop\visual\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.exe
+C:\Users\tmaldonado\Desktop\visual\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.pdb
+D:\visual\ProyectoFinal\ProyectoFinal\bin\Debug\ProyectoFinal.exe.config
+D:\visual\ProyectoFinal\ProyectoFinal\bin\Debug\ProyectoFinal.exe
+D:\visual\ProyectoFinal\ProyectoFinal\bin\Debug\ProyectoFinal.pdb
+D:\visual\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.csproj.AssemblyReference.cache
+D:\visual\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.csproj.CoreCompileInputs.cache
+D:\visual\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.exe
+D:\visual\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.pdb
+C:\Users\Usuario\Desktop\visual\ProyectoFinal\ProyectoFinal\bin\Debug\ProyectoFinal.exe.config
+C:\Users\Usuario\Desktop\visual\ProyectoFinal\ProyectoFinal\bin\Debug\ProyectoFinal.exe
+C:\Users\Usuario\Desktop\visual\ProyectoFinal\ProyectoFinal\bin\Debug\ProyectoFinal.pdb
+C:\Users\Usuario\Desktop\visual\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.csproj.AssemblyReference.cache
+C:\Users\Usuario\Desktop\visual\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Desktop\visual\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.exe
+C:\Users\Usuario\Desktop\visual\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.pdb
+C:\Users\vbruccilari\Desktop\visual studio\ProyectoFinal\ProyectoFinal\bin\Debug\ProyectoFinal.exe.config
+C:\Users\vbruccilari\Desktop\visual studio\ProyectoFinal\ProyectoFinal\bin\Debug\ProyectoFinal.exe
+C:\Users\vbruccilari\Desktop\visual studio\ProyectoFinal\ProyectoFinal\bin\Debug\ProyectoFinal.pdb
+C:\Users\vbruccilari\Desktop\visual studio\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.csproj.AssemblyReference.cache
+C:\Users\vbruccilari\Desktop\visual studio\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.csproj.SuggestedBindingRedirects.cache
+C:\Users\vbruccilari\Desktop\visual studio\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.csproj.CoreCompileInputs.cache
+C:\Users\vbruccilari\Desktop\visual studio\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.exe
+C:\Users\vbruccilari\Desktop\visual studio\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.pdb

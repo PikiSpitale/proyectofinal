@@ -1,0 +1,15 @@
+00;Audi
+01;Ford
+02;Chevrolet
+03;Fiat
+04;Opel
+05;KIA
+06;Nissan
+07;Honda
+08;Suzuki
+09;Kawazaki
+10;Yamaha
+11;KTM
+12;Iveco
+13;Mercedes Benz
+14;Scania
