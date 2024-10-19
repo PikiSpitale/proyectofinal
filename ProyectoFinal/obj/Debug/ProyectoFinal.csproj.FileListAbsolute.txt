@@ -35,3 +35,10 @@ C:\Users\vbruccilari\Desktop\visual studio\ProyectoFinal\ProyectoFinal\obj\Debug
 C:\Users\vbruccilari\Desktop\visual studio\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.csproj.CoreCompileInputs.cache
 C:\Users\vbruccilari\Desktop\visual studio\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.exe
 C:\Users\vbruccilari\Desktop\visual studio\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.pdb
+C:\Users\pikis\OneDrive\Escritorio\Programacion\Programacion 2\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.csproj.AssemblyReference.cache
+C:\Users\pikis\OneDrive\Escritorio\Programacion\Programacion 2\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.csproj.CoreCompileInputs.cache
+C:\Users\pikis\OneDrive\Escritorio\Programacion\Programacion 2\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.exe
+C:\Users\pikis\OneDrive\Escritorio\Programacion\Programacion 2\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.pdb
+C:\Users\pikis\OneDrive\Escritorio\Programacion\Programacion 2\ProyectoFinal\ProyectoFinal\bin\Debug\ProyectoFinal.exe.config
+C:\Users\pikis\OneDrive\Escritorio\Programacion\Programacion 2\ProyectoFinal\ProyectoFinal\bin\Debug\ProyectoFinal.exe
+C:\Users\pikis\OneDrive\Escritorio\Programacion\Programacion 2\ProyectoFinal\ProyectoFinal\bin\Debug\ProyectoFinal.pdb

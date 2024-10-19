@@ -30,12 +30,16 @@ namespace ProyectoFinal
             string marcasTxt = "marcas.txt";
             string segmentosTxt = "segmentos.txt";
             string combustiblesTxt = "combustibles.txt";
-            string vehiculosTxt = "vehiculos.txt";
+            string autosTxt = "autos.txt";
+            string motosTxt = "motos.txt";
+            string camionesTxt = "camiones.txt";
 
             con.CargarListas(marcasTxt);
             con.CargarListas(segmentosTxt);
             con.CargarListas(combustiblesTxt);
-            con.CargarListas(vehiculosTxt);
+            con.CargarListas(autosTxt);
+            con.CargarListas(motosTxt);
+            con.CargarListas(camionesTxt);
 
             Console.WriteLine("----------MARCAS------------");
             con.MostrarMarcas();
@@ -52,6 +56,13 @@ namespace ProyectoFinal
             Console.ReadKey();
             Console.Clear();
             con.EditarMarca(2);
+            Console.ReadKey();
+            Console.Clear();
+            con.EditarAuto(0);
+            Console.ReadKey();
+            Console.Clear();
+            Console.WriteLine("-----------AUTOS------------");
+            con.MostrarAutos();
             Console.ReadLine();
             /*
             _.-="_-         _

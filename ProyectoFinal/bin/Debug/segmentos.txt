@@ -1,0 +1,8 @@
+00;Sedan
+01;Coupe
+02;SUV
+03;Pick Up
+04;Enduro
+05;Rutera
+06;Scooter
+07;Camion

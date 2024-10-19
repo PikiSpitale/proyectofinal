@@ -30,7 +30,7 @@ namespace ProyectoFinal
         }
         //Metodos
 
-        public bool Booleano(string dato)
+        public static bool Booleano(string dato)
         {
             if (dato == "si")
             {
@@ -39,7 +39,7 @@ namespace ProyectoFinal
             else return false;
         }
 
-        public string Cadena(bool dato)
+        public static string Cadena(bool dato)
         {
             if (dato)
             {
@@ -178,8 +178,9 @@ namespace ProyectoFinal
                     }
                 default: break;
             }
-            Archivo.Close();
+            
             escribir.Close();
+            Archivo.Close();
         }
 
 
@@ -201,7 +202,7 @@ namespace ProyectoFinal
             {
                 if (marca.idMarca == id)
                 {
-                    marca.EditarMarca();
+                    marca.Editar();
                 }
             }
             ActualizarListas("marcas.txt");
@@ -230,12 +231,24 @@ namespace ProyectoFinal
             foreach (Auto auto in listAutos)
             {
                 string marca = listMarcas[auto.idMarca].MostrarId();
-                string segmento = listMarcas[auto.idSegmento].MostrarId();
-                string combustible = listMarcas[auto.idCombustible].MostrarId();
+                string segmento = listSegmentos[auto.idSegmento].MostrarId();
+                string combustible = listCombustibles[auto.idCombustible].MostrarId();
                 string caja = Cadena(auto.cajaCarga);
 
                 auto.MostrarVehiculo(marca, segmento, combustible, caja);
             }
+        }
+        
+        public void EditarAuto(int id) 
+        {
+            foreach(Auto auto in listAutos)
+            {
+                if (auto.idVehiculo == id)
+                {
+                    auto.Editar();
+                }
+            }
+            ActualizarListas("autos.txt");
         }
         //------------------------------CAMIONES-----------------------------------
         public void MostrarCamiones()
@@ -256,8 +269,8 @@ namespace ProyectoFinal
             foreach (Moto moto in listMotos)
             {
                 string marca = listMarcas[moto.idMarca].MostrarId();
-                string segmento = listMarcas[moto.idSegmento].MostrarId();
-                string combustible = listMarcas[moto.idCombustible].MostrarId();
+                string segmento = listSegmentos[moto.idSegmento].MostrarId();
+                string combustible = listCombustibles[moto.idCombustible].MostrarId();
                 string caja = Cadena(moto.cajaCarga);
 
                 moto.MostrarVehiculo(marca, segmento, combustible, caja);

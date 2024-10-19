@@ -30,78 +30,83 @@ namespace ProyectoFinal
             int opcion;
             while (cond)
             {
-                Console.WriteLine("Ingrese la opcion para editar");
+                Console.WriteLine("Ingrese la opcion que desea editar");
                 Console.WriteLine("----------------------------------");
                 Console.WriteLine("1- Id marca");
                 Console.WriteLine("2- Id segmento");
                 Console.WriteLine("3- Id combustible");
-                Console.WriteLine("4- Kilometros");
-                Console.WriteLine("5- Año");
-                Console.WriteLine("6- Modelo");
-                Console.WriteLine("7- Precio");
-                Console.WriteLine("8- Observaciones");
-                Console.WriteLine("9- Color");
-                Console.WriteLine("10- Cilindrada");
-                Console.WriteLine("11- Caja de carga");
+                Console.WriteLine("4- Patente");
+                Console.WriteLine("5- Kilometros");
+                Console.WriteLine("6- Año");
+                Console.WriteLine("7- Modelo");
+                Console.WriteLine("8- Precio");
+                Console.WriteLine("9- Observaciones");
+                Console.WriteLine("10- Color");
+                Console.WriteLine("11- Cilindrada");
+                Console.WriteLine("12- Caja de carga");
                 Console.WriteLine();
                 Console.WriteLine("0- Salir");
                 Console.WriteLine("----------------------------------");
-                opcion = Console.Read();
+                opcion = int.Parse(Console.ReadLine());
                 switch (opcion)
                 {
                     case 1:
-                        Console.WriteLine("Ingrese nueva id de marca:");
-                        this.idMarca = Console.Read();
+                        Console.Write("Ingrese nueva id de marca:");
+                        this.idMarca = int.Parse(Console.ReadLine());
                         break;
                     case 2:
-                        Console.WriteLine("Ingrese nueva id de segmento:");
-                        this.idSegmento = Console.Read();
+                        Console.Write("Ingrese nueva id de segmento:");
+                        this.idSegmento = int.Parse(Console.ReadLine());
                         break;
                     case 3:
-                        Console.WriteLine("Ingrese nueva id de combustible:");
-                        this.idCombustible = Console.Read();
+                        Console.Write("Ingrese nueva id de combustible:");
+                        this.idCombustible = int.Parse(Console.ReadLine());
                         break;
                     case 4:
-                        Console.WriteLine("Ingrese nuevos kilometros:");
-                        this.kilometros = Console.Read();
+                        Console.Write("Ingrese nueva patente:");
+                        this.patente = Console.ReadLine();
                         break;
                     case 5:
-                        Console.WriteLine("Ingrese nuevo año:");
-                        this.anio = ;
+                        Console.Write("Ingrese nuevos kilometros:");
+                        this.kilometros = int.Parse(Console.ReadLine());
                         break;
                     case 6:
-                        Console.WriteLine("Ingrese nuevo modelo:");
-                        this.modelo = Console.Read();
+                        Console.Write("Ingrese nuevo año:");
+                        this.anio = int.Parse(Console.ReadLine());
                         break;
                     case 7:
-                        Console.WriteLine("Ingrese precio:");
-                        this.idMarca = Console.Read();
+                        Console.Write("Ingrese nuevo modelo:");
+                        this.modelo = Console.ReadLine();
                         break;
                     case 8:
-                        Console.WriteLine("Ingrese nueva id de marca:");
-                        this.idMarca = Console.Read();
+                        Console.Write("Ingrese precio:");
+                        this.precioVta = int.Parse(Console.ReadLine());
                         break;
                     case 9:
-                        Console.WriteLine("Ingrese nueva id de marca:");
-                        this.idMarca = Console.Read();
+                        Console.Write("Ingrese nuevas observaciones:");
+                        this.observaciones = Console.ReadLine();
                         break;
                     case 10:
-                        Console.WriteLine("Ingrese nueva id de marca:");
-                        this.idMarca = Console.Read();
+                        Console.Write("Ingrese nuevo color:");
+                        this.color = Console.ReadLine();
                         break;
                     case 11:
-                        Console.WriteLine("Ingrese nueva id de marca:");
-                        this.idMarca = Console.Read();
+                        Console.Write("Ingrese nueva cilindrada:");
+                        this.cilindrada = int.Parse(Console.ReadLine());
                         break;
                     case 12:
-                        Console.WriteLine("Ingrese nueva id de marca:");
-                        this.idMarca = Console.Read();
+                        Console.Write("Ingrese nueva caja de carga:");
+                        this.cajaCarga = Concesionaria.Booleano(Console.ReadLine());
                         break;
                     case 0:
                         cond = false;
                         break;
-
+                    default:
+                        Console.WriteLine("Ingrese opcion correcta");
+                        Console.WriteLine("Enter para continuar");
+                        break;
                 }
+                Console.Clear();
             }
             
         }
