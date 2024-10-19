@@ -9,31 +9,31 @@ namespace ProyectoFinal
     internal class Marca : Vehiculo
     {
         //Prop Privadas
-        private string P_marca;
+        private string P_nombMarca;
 
         //Constructores
         public Marca (int IdMarca, string Marca) : base(IdMarca)
         {
-            this.marca = Marca;
+            this.nombMarca = Marca;
         }
 
         //Metodos
-        public void EditarMarca()
+        public override void Editar()
         {
-            Console.Write("Ingrese nuevo nombre: ");
-            this.marca = Console.ReadLine();
+            Console.Write("Ingrese nuevo nombre para la marca: ");
+            this.nombMarca = Console.ReadLine();
         }
         public override string MostrarId()
         {
-            return this.marca;
+            return this.nombMarca;
         }
         public override void MostrarMarSegComb()
         {
-            Console.WriteLine("MARCA: {0} - {1}", idMarca, marca);
+            Console.WriteLine("MARCA: {0} - {1}", idMarca, nombMarca);
         }
 
         //Prop publicas
-        public string marca { get { return this.P_marca; } set { this.P_marca = value; } }
+        public string nombMarca { get { return this.P_nombMarca; } set { this.P_nombMarca = value; } }
 
     }
 }

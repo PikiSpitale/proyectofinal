@@ -60,6 +60,7 @@ namespace ProyectoFinal
         public virtual void MostrarVehiculo(string marca, string segmento, string combustible, string caja) { }
         public virtual string MostrarId() { return "-1"; }
         public virtual void MostrarMarSegComb() { }
+        public virtual void Editar() { }
 
         
 

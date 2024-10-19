@@ -60,7 +60,7 @@ namespace ProyectoFinal
                     {
                         string linea = leer.ReadLine();
                         List<string> datos = new List<string>(linea.Split(';'));
-                        
+
                         switch (txt)
                         {
                             case "marcas.txt":
@@ -75,30 +75,29 @@ namespace ProyectoFinal
                                 Combustible combustible = new Combustible(int.Parse(datos[0]), datos[1]);
                                 listCombustibles.Add(combustible);
                                 break;
-                            case "vehiculos.txt":
-                                {
-                                    int seg = int.Parse(datos[2]);
-                                    if((seg == 0) || (seg == 1) || (seg == 2) || (seg == 3))
-                                    {
-                                        Auto auto = new Auto(int.Parse(datos[0]), int.Parse(datos[1]), int.Parse(datos[2]), int.Parse(datos[3]),
+                            case "autos.txt":
+
+                                Auto auto = new Auto(int.Parse(datos[0]), int.Parse(datos[1]), int.Parse(datos[2]), int.Parse(datos[3]),
                                                             datos[4], int.Parse(datos[5]), int.Parse(datos[6]), datos[7], int.Parse(datos[8]),
                                                             datos[9], datos[10], int.Parse(datos[11]), Booleano(datos[12]));
-                                        listAutos.Add(auto);
-                                    }else if ((seg == 4) || (seg == 5) || (seg == 6)) 
-                                    {
-                                        Moto moto = new Moto(int.Parse(datos[0]), int.Parse(datos[1]), int.Parse(datos[2]), int.Parse(datos[3]),
+                                listAutos.Add(auto);
+                                break;
+
+                            case "motos.txt":
+
+                                Moto moto = new Moto(int.Parse(datos[0]), int.Parse(datos[1]), int.Parse(datos[2]), int.Parse(datos[3]),
                                                             datos[4], int.Parse(datos[5]), int.Parse(datos[6]), datos[7], int.Parse(datos[8]),
                                                             datos[9], datos[10], int.Parse(datos[11]), Booleano(datos[12]));
-                                        listMotos.Add(moto);
-                                    }else if(seg == 7)
-                                    {
-                                        Camion camion = new Camion(int.Parse(datos[0]), int.Parse(datos[1]), int.Parse(datos[2]), int.Parse(datos[3]),
+                                listMotos.Add(moto);
+                                break;
+
+                            case "camiones.txt":
+
+                                Camion camion = new Camion(int.Parse(datos[0]), int.Parse(datos[1]), int.Parse(datos[2]), int.Parse(datos[3]),
                                                             datos[4], int.Parse(datos[5]), int.Parse(datos[6]), datos[7], int.Parse(datos[8]),
                                                             datos[9], datos[10], int.Parse(datos[11]), Booleano(datos[12]), int.Parse(datos[13]), int.Parse(datos[14]));
-                                        listCamiones.Add(camion);
-                                    }
-                                    break;
-                                }
+                                listCamiones.Add(camion);
+                                break;
 
                             default: break;
                         }
@@ -118,14 +117,69 @@ namespace ProyectoFinal
         {
             FileStream Archivo = new FileStream(txt, FileMode.Create, FileAccess.Write);
             StreamWriter escribir = new StreamWriter(Archivo);
-            if (txt == "marcas.txt")
+            switch (txt)
             {
-                foreach (Marca marca in listMarcas)
-                {
-                    escribir.WriteLine(marca.idMarca.ToString() + ";" + marca.marca);
-                }
+                case "marcas.txt":
+                    {
+                        foreach (Marca marca in listMarcas)
+                        {
+                            escribir.WriteLine(marca.idMarca.ToString() + ";" + marca.nombMarca);
+                        }
+                        break;
+                    }
+                case "segmentos.txt":
+                    {
+                        foreach (Segmento seg in listSegmentos)
+                        {
+                            escribir.WriteLine(seg.idMarca.ToString() + ";" + seg.nombSegmento);
+                        }
+                        break;
+                    }
+                case "combustibles.txt":
+                    {
+                        foreach (Combustible comb in listCombustibles)
+                        {
+                            escribir.WriteLine(comb.idCombustible.ToString() + ";" + comb.nombCombustible);
+                        }
+                        break;
+                    }
+                case "autos.txt":
+                    {
+                        foreach (Auto auto in listAutos)
+                        {
+                            escribir.WriteLine(auto.idVehiculo.ToString() + ";" + auto.idMarca.ToString() + ";" + auto.idSegmento.ToString() + ";" + 
+                                                auto.idCombustible.ToString() + ";" + auto.patente + ";" + auto.kilometros.ToString() + ";" + auto.anio.ToString() + ";" + 
+                                                auto.modelo + ";" + auto.precioVta.ToString() + ";" + auto.observaciones + ";" + auto.color + ";" + auto.cilindrada + ";" + 
+                                                Cadena(auto.cajaCarga));
+                        }
+                        break;
+                    }
+                case "motos.txt":
+                    {
+                        foreach (Moto moto in listMotos)
+                        {
+                            escribir.WriteLine(moto.idVehiculo.ToString() + ";" + moto.idMarca.ToString() + ";" + moto.idSegmento.ToString() + ";" +
+                                                moto.idCombustible.ToString() + ";" + moto.patente + ";" + moto.kilometros.ToString() + ";" + moto.anio.ToString() + ";" +
+                                                moto.modelo + ";" + moto.precioVta.ToString() + ";" + moto.observaciones + ";" + moto.color + ";" + moto.cilindrada + ";" +
+                                                Cadena(moto.cajaCarga));
+                        }
+                        break;
+                    }
+                case "camiones.txt":
+                    { 
+                        foreach (Camion camion in listCamiones)
+                        {
+                            escribir.WriteLine(camion.idVehiculo.ToString() + ";" + camion.idMarca.ToString() + ";" + camion.idSegmento.ToString() + ";" +
+                                                camion.idCombustible.ToString() + ";" + camion.patente + ";" + camion.kilometros.ToString() + ";" + camion.anio.ToString() + ";" +
+                                                camion.modelo + ";" + camion.precioVta.ToString() + ";" + camion.observaciones + ";" + camion.color + ";" + camion.cilindrada + ";" +
+                                                Cadena(camion.cajaCarga) + ";" + camion.dimensionCaja.ToString() + ";" + camion.cargaMax.ToString());
+                        }
+                        break;
+                    }
+                default: break;
             }
-
+            Archivo.Close();
+            escribir.Close();
         }
 
 
@@ -162,7 +216,7 @@ namespace ProyectoFinal
                 seg.MostrarMarSegComb();
             }
         }
-
+        //------------------------------COMBUSTIBLES-----------------------------------
         public void MostrarCombustibles()
         {
             foreach (Combustible comb in listCombustibles)
@@ -170,7 +224,7 @@ namespace ProyectoFinal
                 comb.MostrarMarSegComb();
             }
         }
-
+        //------------------------------AUTOS-----------------------------------
         public void MostrarAutos()
         {
             foreach (Auto auto in listAutos)
@@ -183,6 +237,7 @@ namespace ProyectoFinal
                 auto.MostrarVehiculo(marca, segmento, combustible, caja);
             }
         }
+        //------------------------------CAMIONES-----------------------------------
         public void MostrarCamiones()
         {
             foreach (Camion camion in listCamiones)
@@ -195,6 +250,7 @@ namespace ProyectoFinal
                 camion.MostrarVehiculo(marca, segmento, combustible, caja);
             }
         }
+        //------------------------------MOTOS-----------------------------------
         public void MostrarMotos()
         {
             foreach (Moto moto in listMotos)
