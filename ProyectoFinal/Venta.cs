@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -9,65 +10,61 @@ namespace ProyectoFinal
     internal class Venta : Vehiculo
     {
         //Prop Privadas
-        private int id_cliente;
-        private DateTime fecha_compra;
+        private int p_id_cliente;
+        private DateTime p_fecha_compra;
         private DateTime fecha_entrega;
-        private float subtotal;
-        private float iva;
-        private float descuento;
-        private float total;
+        private double p_subtotal;
+        private double p_iva;
+        private double p_descuento;
+        private double p_total;
 
         //Constructores
-        public Venta (int Id_cliente, DateTime Fecha_compra, DateTime Fecha_entrega, float Subtotal, float Iva, float Descuento, float Total)
+        public Venta(int Id_cliente, int Idvehiculo, DateTime Fecha_compra, DateTime Fecha_entrega, double Subtotal) : base (Idvehiculo)
         {
-            this.id_cliente = Id_cliente;
-            this.subtotal = Subtotal;
-            this.iva = Iva;
-            this.descuento = Descuento;
-            this.total = Total;
+            this.Id_cliente = Id_cliente;
+            this.Fecha_compra = Fecha_compra;
+            this.Fecha_entrega = Fecha_entrega;
+            this.Subtotal = Subtotal;
         }
-
-
+        
         //Metodos
-
-
+        public void MostrarVenta() { }
+        
+        
 
         //Prop publicas
         public int Id_cliente
         {
-            get { return this.id_cliente; }
-            set { this.id_cliente = value; }
+            get { return this.p_id_cliente; }
+            set { this.p_id_cliente = value; }
         }
         public DateTime Fecha_compra
         {
-            get => this.fecha_compra;
+            get { return this.p_fecha_compra; }
+            set { this.p_fecha_compra = value;}
         }
         public DateTime Fecha_entrega
         {
-            get => this.fecha_entrega;
+            get { return this.fecha_entrega; }
+            set { this.fecha_entrega = value;}
         }
-        public float Subtotal
+        public double Subtotal
         {
             get { return this.Subtotal; }
             set { this.Subtotal = value; }
         }
-        public float Iva
+        public double Iva
         {
-            get { return this.iva; }
-            set { this.iva = value; }
+            get { return this.Subtotal * 0.21; }
         }
-        public float Descuento
+        public double Descuento
         {
-            get { return this.descuento; }
-            set { this.descuento = value; }
+            get { return this.p_descuento; }
         }
-        public float Total
+        public double Total
         {
-            get { return this.total; }
-            set { this.total = value; }
+            get { return this.Subtotal + this.Iva + this.Descuento; }
         }
        
-
-
     }
 }

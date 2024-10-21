@@ -20,6 +20,7 @@ namespace ProyectoFinal
             Segmento segmento = new Segmento(3, "Pick-Up");
             
             
+            
 
             Concesionaria con = new Concesionaria();
 
