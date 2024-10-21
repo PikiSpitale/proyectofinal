@@ -220,6 +220,24 @@ namespace ProyectoFinal
 
             ActualizarListas("marcas.txt");
         }
+        public void BorrarMarca()
+        {
+            Console.Write("Ingrese id que desea eliminar o ingrese -1 si desea salir: ");
+            int id = int.Parse(Console.ReadLine());
+            int cont = 0;
+            if (id != -1)
+            {
+                foreach (Marca marca in listMarcas.ToList<Marca>())
+                {
+                    if (marca.idMarca == id)
+                    {
+                        listMarcas.RemoveAt(cont);
+                    }
+                    cont++;
+                }
+            }
+            ActualizarListas("marcas.txt");
+        }
 
         //------------------------------SEGMENTOS-----------------------------------
         public void MostrarSegmentos()
@@ -255,6 +273,24 @@ namespace ProyectoFinal
 
             ActualizarListas("segmentos.txt");
         }
+        public void BorrarSegmento()
+        {
+            Console.Write("Ingrese id que desea eliminar o ingrese -1 si desea salir: ");
+            int id = int.Parse(Console.ReadLine());
+            int cont = 0;
+            if (id != -1)
+            {
+                foreach (Segmento seg in listSegmentos.ToList<Segmento>())
+                {
+                    if (seg.idSegmento == id)
+                    {
+                        listSegmentos.RemoveAt(cont);
+                    }
+                    cont++;
+                }
+            }
+            ActualizarListas("segmentos.txt");
+        }
         //------------------------------COMBUSTIBLES-----------------------------------
         public void MostrarCombustibles()
         {
@@ -287,6 +323,24 @@ namespace ProyectoFinal
             Combustible comb = new Combustible(listCombustibles.Count, nomb);
             listCombustibles.Add(comb);
 
+            ActualizarListas("combustibles.txt");
+        }
+        public void BorrarCombustible()
+        {
+            Console.Write("Ingrese id que desea eliminar o ingrese -1 si desea salir: ");
+            int id = int.Parse(Console.ReadLine());
+            int cont = 0;
+            if (id != -1)
+            {
+                foreach (Combustible comb in listCombustibles.ToList<Combustible>())
+                {
+                    if (comb.idCombustible == id)
+                    {
+                        listCombustibles.RemoveAt(cont);
+                    }
+                    cont++;
+                }
+            }
             ActualizarListas("combustibles.txt");
         }
         //------------------------------AUTOS-----------------------------------
@@ -359,6 +413,24 @@ namespace ProyectoFinal
             Auto auto = new Auto(listAutos.Count, idmarca, idseg, idcomb, patente, kilometros, anio, modelo, precio, observaciones, color, cilindrada, Booleano(cajacarga));
             listAutos.Add(auto);
 
+            ActualizarListas("autos.txt");
+        }
+        public void BorrarAuto()
+        {
+            Console.Write("Ingrese id que desea eliminar o ingrese -1 si desea salir: ");
+            int id = int.Parse(Console.ReadLine());
+            int cont = 0;
+            if (id != -1)
+            {
+                foreach (Auto auto in listAutos.ToList<Auto>())
+                {
+                    if (auto.idVehiculo == id)
+                    {
+                        listAutos.RemoveAt(cont);
+                    }
+                    cont++;
+                }
+            }
             ActualizarListas("autos.txt");
         }
         //------------------------------CAMIONES-----------------------------------
@@ -439,6 +511,24 @@ namespace ProyectoFinal
 
             ActualizarListas("camiones.txt");
         }
+        public void BorrarCamion()
+        {
+            Console.Write("Ingrese id que desea eliminar o ingrese -1 si desea salir: ");
+            int id = int.Parse(Console.ReadLine());
+            int cont = 0;
+            if (id != -1)
+            {
+                foreach (Camion cam in listCamiones.ToList<Camion>())
+                {
+                    if (cam.idVehiculo == id)
+                    {
+                        listCamiones.RemoveAt(cont);
+                    }
+                    cont++;
+                }
+            }
+            ActualizarListas("camiones.txt");
+        }
         //------------------------------MOTOS-----------------------------------
         public void MostrarMotos()
         {
@@ -509,6 +599,24 @@ namespace ProyectoFinal
             Moto moto = new Moto(listMotos.Count, idmarca, idseg, idcomb, patente, kilometros, anio, modelo, precio, observaciones, color, cilindrada, Booleano(cajacarga));
             listMotos.Add(moto);
 
+            ActualizarListas("motos.txt");
+        }
+        public void BorrarMoto()
+        {
+            Console.Write("Ingrese id que desea eliminar o ingrese -1 si desea salir: ");
+            int id = int.Parse(Console.ReadLine());
+            int cont = 0;
+            if (id != -1)
+            {
+                foreach (Moto moto in listMotos.ToList<Moto>())
+                {
+                    if (moto.idVehiculo == id)
+                    {
+                        listMotos.RemoveAt(cont);
+                    }
+                    cont++;
+                }
+            }
             ActualizarListas("motos.txt");
         }
         //Prop publicas

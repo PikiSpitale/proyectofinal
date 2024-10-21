@@ -42,7 +42,7 @@ namespace ProyectoFinal
             con.CargarListas(camionesTxt);
 
 
-
+          
             //**********************CARGAR**************************
             bool cond = true;
             while (cond) { 
@@ -184,9 +184,82 @@ namespace ProyectoFinal
             Console.WriteLine("-----------MOTOS------------");
             con.MostrarMotos();
             Console.ReadLine();
+            Console.Clear();
+            
 
+            //*********************BORRAR**************************
 
+            Console.WriteLine("-----------MARCAS------------");
+            con.MostrarMarcas();
+            Console.ReadKey();
+            Console.Clear();
+            con.BorrarMarca();
+            Console.ReadKey();
+            Console.Clear();
+            Console.WriteLine("-----------MARCAS------------");
+            con.MostrarMarcas();
+            Console.ReadKey();
+            Console.Clear();
 
+            Console.WriteLine("-----------SEGMENTOS------------");
+            con.MostrarSegmentos();
+            Console.ReadKey();
+            Console.Clear();
+            con.BorrarSegmento();
+            Console.ReadKey();
+            Console.Clear();
+            Console.WriteLine("-----------SEGMENTOS------------");
+            con.MostrarSegmentos();
+            Console.ReadKey();
+            Console.Clear();
+
+            Console.WriteLine("-----------COMBUSTIBLES------------");
+            con.MostrarCombustibles();
+            Console.ReadKey();
+            Console.Clear();
+            con.BorrarCombustible();
+            Console.ReadKey();
+            Console.Clear();
+            Console.WriteLine("-----------COMBUSTIBLES------------");
+            con.MostrarCombustibles();
+            Console.ReadKey();
+            Console.Clear();
+
+            Console.WriteLine("-----------AUTOS------------");
+            con.MostrarAutos();
+            Console.ReadKey();
+            Console.Clear();
+            con.BorrarAuto();
+            Console.ReadKey();
+            Console.Clear();
+            Console.WriteLine("-----------AUTOS------------");
+            con.MostrarAutos();
+            Console.ReadKey();
+            Console.Clear();
+
+            Console.WriteLine("-----------CAMIONES------------");
+            con.MostrarCamiones();
+            Console.ReadKey();
+            Console.Clear();
+            con.BorrarCamion();
+            Console.ReadKey();
+            Console.Clear();
+            Console.WriteLine("-----------CAMIONES------------");
+            con.MostrarCamiones();
+            Console.ReadKey();
+            Console.Clear();
+
+            Console.WriteLine("-----------MOTOS------------");
+            con.MostrarMotos();
+            Console.ReadKey();
+            Console.Clear();
+            con.BorrarMoto();
+            Console.ReadKey();
+            Console.Clear();
+            Console.WriteLine("-----------MOTOS------------");
+            con.MostrarMotos();
+            Console.ReadKey();
+            Console.Clear();
 
             /*
             _.-="_-         _
@@ -199,7 +272,7 @@ V___________:|          |: |========================|    :|          |:   _-"
  V__________: \        / :_|=======================/_____: \        / :__-"
  -----------'  "-____-"  `-------------------------------'  "-____-"
             */
-            
+
         }
         /*
         public static void Menu()

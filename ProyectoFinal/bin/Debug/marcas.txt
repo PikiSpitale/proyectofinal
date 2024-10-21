@@ -13,4 +13,3 @@
 12;Iveco
 13;Mercedes Benz
 14;Scania
-15;Tesla
