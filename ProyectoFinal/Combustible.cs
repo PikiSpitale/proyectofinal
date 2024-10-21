@@ -20,8 +20,12 @@ namespace ProyectoFinal
         //Metodos
         public override void Editar()
         {
-            Console.Write("Ingrese nuevo nombre para el combustible: ");
-            this.nombCombustible = Console.ReadLine();
+            Console.Write("Ingrese nuevo nombre para el combustible o 0 para salir: ");
+            string opcion = Console.ReadLine();
+            if (opcion != "0")
+            {
+                this.nombCombustible = opcion;
+            }
         }
         public override string MostrarId()
         {

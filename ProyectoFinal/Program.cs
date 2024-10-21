@@ -41,6 +41,8 @@ namespace ProyectoFinal
             con.CargarListas(motosTxt);
             con.CargarListas(camionesTxt);
 
+            //********************LISTADO(MEJORAR NOMBRES)**********
+
             Console.WriteLine("----------MARCAS------------");
             con.MostrarMarcas();
             Console.WriteLine("---------SEGMENTOS----------");
@@ -55,15 +57,59 @@ namespace ProyectoFinal
             con.MostrarCamiones();
             Console.ReadKey();
             Console.Clear();
-            con.EditarMarca(2);
+
+            //*********************EDICION**************************
+
+            con.EditarMarca();
             Console.ReadKey();
             Console.Clear();
-            con.EditarAuto(0);
+            Console.WriteLine("----------MARCAS------------");
+            con.MostrarMarcas();
+            Console.ReadKey();
+            Console.Clear();
+
+            con.EditarSegmento();
+            Console.ReadKey();
+            Console.Clear();
+            Console.WriteLine("-------SEGMENTOS---------");
+            con.MostrarSegmentos();
+            Console.ReadKey();
+            Console.Clear();
+
+            con.EditarCombustible();
+            Console.ReadKey();
+            Console.Clear();
+            Console.WriteLine("-------COMBUSTIBLES---------");
+            con.MostrarCombustibles();
+            Console.ReadKey();
+            Console.Clear();
+
+            con.EditarAuto();
             Console.ReadKey();
             Console.Clear();
             Console.WriteLine("-----------AUTOS------------");
             con.MostrarAutos();
+            Console.ReadKey();
+            Console.Clear();
+
+            con.EditarCamion();
+            Console.ReadKey();
+            Console.Clear();
+            Console.WriteLine("---------CAMIONES-----------");
+            con.MostrarCamiones();
+            Console.ReadKey();
+            Console.Clear();
+
+            con.EditarMoto();
+            Console.ReadKey();
+            Console.Clear();
+            Console.WriteLine("-----------MOTOS------------");
+            con.MostrarMotos();
             Console.ReadLine();
+
+
+
+
             /*
             _.-="_-         _
                          _.-="   _-          | ||"""""""---._______     __..

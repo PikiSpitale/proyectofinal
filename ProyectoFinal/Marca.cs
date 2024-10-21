@@ -20,8 +20,12 @@ namespace ProyectoFinal
         //Metodos
         public override void Editar()
         {
-            Console.Write("Ingrese nuevo nombre para la marca: ");
-            this.nombMarca = Console.ReadLine();
+            Console.Write("Ingrese nuevo nombre para la marca o 0 para salir: ");
+            string opcion = Console.ReadLine();
+            if (opcion != "0")
+            {
+                this.nombMarca = opcion;
+            }           
         }
         public override string MostrarId()
         {

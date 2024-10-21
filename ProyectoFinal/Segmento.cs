@@ -20,8 +20,12 @@ namespace ProyectoFinal
         //Metodos
         public override void Editar()
         {
-            Console.Write("Ingrese nuevo nombre para el segmento: ");
-            this.nombSegmento = Console.ReadLine();
+            Console.Write("Ingrese nuevo nombre para el segmento o 0 para salir: ");
+            string opcion = Console.ReadLine();
+            if (opcion != "0")
+            {
+                this.nombSegmento = opcion;
+            }
         }
         public override string MostrarId()
         {

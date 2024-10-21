@@ -196,8 +196,13 @@ namespace ProyectoFinal
             }
 
         }
-        public void EditarMarca(int id)
+        public void EditarMarca()
         {
+            MostrarMarcas();          
+            Console.WriteLine("---------------------------");
+            Console.Write("Ingrese id que desea editar: ");
+            int id = int.Parse(Console.ReadLine());
+            Console.Clear();
             foreach(Marca marca in listMarcas)
             {
                 if (marca.idMarca == id)
@@ -217,6 +222,22 @@ namespace ProyectoFinal
                 seg.MostrarMarSegComb();
             }
         }
+        public void EditarSegmento()
+        {
+            MostrarSegmentos();
+            Console.WriteLine("---------------------------");
+            Console.Write("Ingrese id que desea editar: ");
+            int id = int.Parse(Console.ReadLine());
+            Console.Clear();
+            foreach (Segmento seg in listSegmentos)
+            {
+                if (seg.idSegmento == id)
+                {
+                    seg.Editar();
+                }
+            }
+            ActualizarListas("segmentos.txt");
+        }
         //------------------------------COMBUSTIBLES-----------------------------------
         public void MostrarCombustibles()
         {
@@ -224,6 +245,22 @@ namespace ProyectoFinal
             {
                 comb.MostrarMarSegComb();
             }
+        }
+        public void EditarCombustible()
+        {
+            MostrarCombustibles();
+            Console.WriteLine("---------------------------");
+            Console.Write("Ingrese id que desea editar: ");
+            int id = int.Parse(Console.ReadLine());
+            Console.Clear();
+            foreach (Combustible comb in listCombustibles)
+            {
+                if (comb.idCombustible == id)
+                {
+                    comb.Editar();
+                }
+            }
+            ActualizarListas("combustibles.txt");
         }
         //------------------------------AUTOS-----------------------------------
         public void MostrarAutos()
@@ -239,9 +276,14 @@ namespace ProyectoFinal
             }
         }
         
-        public void EditarAuto(int id) 
+        public void EditarAuto() 
         {
-            foreach(Auto auto in listAutos)
+            MostrarAutos();
+            Console.WriteLine("---------------------------");
+            Console.Write("Ingrese id que desea editar: ");
+            int id = int.Parse(Console.ReadLine());
+            Console.Clear();
+            foreach (Auto auto in listAutos)
             {
                 if (auto.idVehiculo == id)
                 {
@@ -263,6 +305,22 @@ namespace ProyectoFinal
                 camion.MostrarVehiculo(marca, segmento, combustible, caja);
             }
         }
+        public void EditarCamion()
+        {
+            MostrarCamiones();
+            Console.WriteLine("---------------------------");
+            Console.Write("Ingrese id que desea editar: ");
+            int id = int.Parse(Console.ReadLine());
+            Console.Clear();
+            foreach (Camion camion in listCamiones)
+            {
+                if (camion.idVehiculo == id)
+                {
+                    camion.Editar();
+                }
+            }
+            ActualizarListas("camiones.txt");
+        }
         //------------------------------MOTOS-----------------------------------
         public void MostrarMotos()
         {
@@ -275,6 +333,22 @@ namespace ProyectoFinal
 
                 moto.MostrarVehiculo(marca, segmento, combustible, caja);
             }
+        }
+        public void EditarMoto()
+        {
+            MostrarMotos();
+            Console.WriteLine("---------------------------");
+            Console.Write("Ingrese id que desea editar: ");
+            int id = int.Parse(Console.ReadLine());
+            Console.Clear();
+            foreach (Moto moto in listMotos)
+            {
+                if (moto.idVehiculo == id)
+                {
+                    moto.Editar();
+                }
+            }
+            ActualizarListas("motos.txt");
         }
         //Prop publicas
     }
