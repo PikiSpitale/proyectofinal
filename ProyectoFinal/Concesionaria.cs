@@ -47,6 +47,8 @@ namespace ProyectoFinal
             }else return "no";
         }
 
+        //--------------------------------------------------------------------------
+        //----------------------------------LISTAS----------------------------------
         public void CargarListas(string txt)
         {
             FileStream Archivo = new FileStream(txt, FileMode.Open, FileAccess.Read);
@@ -112,7 +114,6 @@ namespace ProyectoFinal
             Archivo.Close();
             leer.Close();
         }
-
         public void ActualizarListas(string txt) 
         {
             FileStream Archivo = new FileStream(txt, FileMode.Create, FileAccess.Write);
@@ -182,9 +183,6 @@ namespace ProyectoFinal
             escribir.Close();
             Archivo.Close();
         }
-
-
-
         //--------------------------------------------------------------------------
         //----------------------------------MARCA-----------------------------------
         //MOSTRAR
@@ -212,7 +210,16 @@ namespace ProyectoFinal
             }
             ActualizarListas("marcas.txt");
         }
+        public void CargarMarca()
+        {
+            Console.Write("Ingrese nombre de la marca: ");
+            string nomb = Console.ReadLine();
 
+            Marca marca = new Marca(listMarcas.Count, nomb);
+            listMarcas.Add(marca);
+
+            ActualizarListas("marcas.txt");
+        }
 
         //------------------------------SEGMENTOS-----------------------------------
         public void MostrarSegmentos()
@@ -236,6 +243,16 @@ namespace ProyectoFinal
                     seg.Editar();
                 }
             }
+            ActualizarListas("segmentos.txt");
+        }
+        public void CargarSegmento()
+        {
+            Console.Write("Ingrese nombre de la Segmento: ");
+            string nomb = Console.ReadLine();
+
+            Segmento seg = new Segmento(listSegmentos.Count, nomb);
+            listSegmentos.Add(seg);
+
             ActualizarListas("segmentos.txt");
         }
         //------------------------------COMBUSTIBLES-----------------------------------
@@ -262,6 +279,16 @@ namespace ProyectoFinal
             }
             ActualizarListas("combustibles.txt");
         }
+        public void CargarCombustible()
+        {
+            Console.Write("Ingrese nombre de la combustible: ");
+            string nomb = Console.ReadLine();
+
+            Combustible comb = new Combustible(listCombustibles.Count, nomb);
+            listCombustibles.Add(comb);
+
+            ActualizarListas("combustibles.txt");
+        }
         //------------------------------AUTOS-----------------------------------
         public void MostrarAutos()
         {
@@ -274,8 +301,7 @@ namespace ProyectoFinal
 
                 auto.MostrarVehiculo(marca, segmento, combustible, caja);
             }
-        }
-        
+        }       
         public void EditarAuto() 
         {
             MostrarAutos();
@@ -290,6 +316,49 @@ namespace ProyectoFinal
                     auto.Editar();
                 }
             }
+            ActualizarListas("autos.txt");
+        }
+        public void CargarAuto()
+        {
+            Console.Write("Ingrese id de la marca: ");
+            int idmarca = int.Parse(Console.ReadLine());
+
+            Console.Write("Ingrese id del segmento: ");
+            int idseg = int.Parse(Console.ReadLine());
+
+            Console.Write("Ingrese id del combustible: ");
+            int idcomb = int.Parse(Console.ReadLine());
+
+            Console.Write("Ingrese patente: ");
+            string patente = Console.ReadLine();
+
+            Console.Write("Ingrese kilometros: ");
+            int kilometros = int.Parse(Console.ReadLine());
+
+            Console.Write("Ingrese año: ");
+            int anio = int.Parse(Console.ReadLine());
+
+            Console.Write("Ingrese modelo: ");
+            string modelo = Console.ReadLine();
+
+            Console.Write("Ingrese precio: ");
+            float precio = float.Parse(Console.ReadLine());
+
+            Console.Write("Ingrese observaciones: ");
+            string observaciones = Console.ReadLine();
+
+            Console.Write("Ingrese color: ");
+            string color = Console.ReadLine();
+
+            Console.Write("Ingrese cilindrada: ");
+            int cilindrada = int.Parse(Console.ReadLine());
+
+            Console.Write("Ingrese caja de carga: ");
+            string cajacarga = Console.ReadLine();
+
+            Auto auto = new Auto(listAutos.Count, idmarca, idseg, idcomb, patente, kilometros, anio, modelo, precio, observaciones, color, cilindrada, Booleano(cajacarga));
+            listAutos.Add(auto);
+
             ActualizarListas("autos.txt");
         }
         //------------------------------CAMIONES-----------------------------------
@@ -321,6 +390,55 @@ namespace ProyectoFinal
             }
             ActualizarListas("camiones.txt");
         }
+        public void CargarCamion()
+        {
+            Console.Write("Ingrese id de la marca: ");
+            int idmarca = int.Parse(Console.ReadLine());
+
+            Console.Write("Ingrese id del segmento: ");
+            int idseg = int.Parse(Console.ReadLine());
+
+            Console.Write("Ingrese id del combustible: ");
+            int idcomb = int.Parse(Console.ReadLine());
+
+            Console.Write("Ingrese patente: ");
+            string patente = Console.ReadLine();
+
+            Console.Write("Ingrese kilometros: ");
+            int kilometros = int.Parse(Console.ReadLine());
+
+            Console.Write("Ingrese año: ");
+            int anio = int.Parse(Console.ReadLine());
+
+            Console.Write("Ingrese modelo: ");
+            string modelo = Console.ReadLine();
+
+            Console.Write("Ingrese precio: ");
+            float precio = float.Parse(Console.ReadLine());
+
+            Console.Write("Ingrese observaciones: ");
+            string observaciones = Console.ReadLine();
+
+            Console.Write("Ingrese color: ");
+            string color = Console.ReadLine();
+
+            Console.Write("Ingrese cilindrada: ");
+            int cilindrada = int.Parse(Console.ReadLine());
+
+            Console.Write("Ingrese caja de carga: ");
+            string cajacarga = Console.ReadLine();
+
+            Console.Write("Ingrese dimension de la caja de carga: ");
+            int dimensioncajacarga = int.Parse(Console.ReadLine());
+
+            Console.Write("Ingrese carga maxima: ");
+            int cargamaxima = int.Parse(Console.ReadLine());
+
+            Camion camion = new Camion(listCamiones.Count, idmarca, idseg, idcomb, patente, kilometros, anio, modelo, precio, observaciones, color, cilindrada, Booleano(cajacarga), dimensioncajacarga, cargamaxima);
+            listCamiones.Add(camion);
+
+            ActualizarListas("camiones.txt");
+        }
         //------------------------------MOTOS-----------------------------------
         public void MostrarMotos()
         {
@@ -348,6 +466,49 @@ namespace ProyectoFinal
                     moto.Editar();
                 }
             }
+            ActualizarListas("motos.txt");
+        }
+        public void CargarMoto()
+        {
+            Console.Write("Ingrese id de la marca: ");
+            int idmarca = int.Parse(Console.ReadLine());
+
+            Console.Write("Ingrese id del segmento: ");
+            int idseg = int.Parse(Console.ReadLine());
+
+            Console.Write("Ingrese id del combustible: ");
+            int idcomb = int.Parse(Console.ReadLine());
+
+            Console.Write("Ingrese patente: ");
+            string patente = Console.ReadLine();
+
+            Console.Write("Ingrese kilometros: ");
+            int kilometros = int.Parse(Console.ReadLine());
+
+            Console.Write("Ingrese año: ");
+            int anio = int.Parse(Console.ReadLine());
+
+            Console.Write("Ingrese modelo: ");
+            string modelo = Console.ReadLine();
+
+            Console.Write("Ingrese precio: ");
+            float precio = float.Parse(Console.ReadLine());
+
+            Console.Write("Ingrese observaciones: ");
+            string observaciones = Console.ReadLine();
+
+            Console.Write("Ingrese color: ");
+            string color = Console.ReadLine();
+
+            Console.Write("Ingrese cilindrada: ");
+            int cilindrada = int.Parse(Console.ReadLine());
+
+            Console.Write("Ingrese caja de carga: ");
+            string cajacarga = Console.ReadLine();
+
+            Moto moto = new Moto(listMotos.Count, idmarca, idseg, idcomb, patente, kilometros, anio, modelo, precio, observaciones, color, cilindrada, Booleano(cajacarga));
+            listMotos.Add(moto);
+
             ActualizarListas("motos.txt");
         }
         //Prop publicas

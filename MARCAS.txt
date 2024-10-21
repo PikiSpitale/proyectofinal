@@ -1,7 +1,7 @@
 0;Audi
 1;Ford
-2;Chevrolet
-3;Fiat
+2;godanasheinsta
+3;Eizovich
 4;Opel
 5;KIA
 6;Nissan
@@ -13,4 +13,3 @@
 12;Iveco
 13;Mercedes Benz
 14;Scania
-15;Tesla

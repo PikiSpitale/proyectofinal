@@ -41,6 +41,85 @@ namespace ProyectoFinal
             con.CargarListas(motosTxt);
             con.CargarListas(camionesTxt);
 
+
+
+            //**********************CARGAR**************************
+            bool cond = true;
+            while (cond) { 
+            con.CargarMarca();
+            Console.WriteLine("desea continuar? ");
+            int nashe = int.Parse(Console.ReadLine());
+            Console.Clear();
+                if (nashe == 0) {
+                    cond = false;  
+                }
+            
+            }
+            cond = true;
+            while (cond)
+            {
+                con.CargarSegmento();
+                Console.WriteLine("desea continuar? ");
+                int nashe = int.Parse(Console.ReadLine());
+                Console.Clear();
+                if (nashe == 0)
+                {
+                    cond = false;
+                }
+
+            }
+            cond = true;
+            while (cond)
+            {
+                con.CargarCombustible();
+                Console.WriteLine("desea continuar? ");
+                int nashe = int.Parse(Console.ReadLine());
+                Console.Clear();
+                if (nashe == 0)
+                {
+                    cond = false;
+                }
+
+            }
+            cond = true;
+            while (cond)
+            {
+                con.CargarAuto();
+                Console.WriteLine("desea continuar? ");
+                int nashe = int.Parse(Console.ReadLine());
+                Console.Clear();
+                if (nashe == 0)
+                {
+                    cond = false;
+                }
+
+            }
+            cond = true;
+            while (cond)
+            {
+                con.CargarMoto();
+                Console.WriteLine("desea continuar? ");
+                int nashe = int.Parse(Console.ReadLine());
+                Console.Clear();
+                if (nashe == 0)
+                {
+                    cond = false;
+                }
+
+            }
+            cond = true;
+            while (cond)
+            {
+                con.CargarCamion();
+                Console.WriteLine("desea continuar? ");
+                int nashe = int.Parse(Console.ReadLine());
+                Console.Clear();
+                if (nashe == 0)
+                {
+                    cond = false;
+                }
+
+            }
             //********************LISTADO(MEJORAR NOMBRES)**********
 
             Console.WriteLine("----------MARCAS------------");
@@ -51,13 +130,12 @@ namespace ProyectoFinal
             con.MostrarCombustibles();
             Console.WriteLine("-----------AUTOS------------");
             con.MostrarAutos();
-            Console.WriteLine("-----------MOTOS------------"); 
+            Console.WriteLine("-----------MOTOS------------");
             con.MostrarMotos();
             Console.WriteLine("---------CAMIONES-----------");
             con.MostrarCamiones();
             Console.ReadKey();
             Console.Clear();
-
             //*********************EDICION**************************
 
             con.EditarMarca();
